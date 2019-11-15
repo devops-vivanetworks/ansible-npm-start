@@ -1,0 +1,9 @@
+---
+- name: Use NPM to start the target
+  command: npm start
+  args:
+    chdir: "{{ target_path }}"
+  async: 42
+  poll: 0
+  become: yes
+  become_user: root
